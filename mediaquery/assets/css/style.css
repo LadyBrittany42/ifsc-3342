@@ -1,0 +1,140 @@
+/* apply a natural box layout model to all elements, but allowing components to change 
+
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+*/
+
+html{
+    box-sizing: border-box;
+}
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+
+/*base css*/
+body{font-family: 'Droid Serif';
+background:#374E5A; 
+/*overflow: auto;*/
+    
+}
+
+.col{
+    background:#5a7b6c;
+    border-radius:3px;
+    padding:20px;
+    margin:20px auto;
+}
+
+.col:nth-child(odd){
+    background:#8fb87f;
+}
+
+.col p{
+    color:white;
+    text-shadow:1px 1px #000;
+}
+
+.container{
+    max-width:420px;
+    margin:0 auto;
+}
+
+/*tablet*/
+
+@media screen and (min-width:768px){
+    .col{
+        float:left;
+        width:48%;
+        margin:1%;
+    }
+    
+    .container{
+        max-width:900px;
+    }
+}
+
+/*desktop*/
+
+@media screen and (min-width:992px){
+    .col{
+        width:23%;
+        
+    }
+}
+
+.container{
+    max-width:1000px;
+}
+
+/*.col{
+    width:46%;
+    margin:1%;
+    background:#5a7b6c;
+    border-radius:6px;
+    padding:2em;
+    float:left;
+}
+
+.col:nth-child(odd){
+    color:#fff;
+    text-shadow:1px 1px #000;
+}
+
+.fancy{
+    display:none;
+}
+
+/*max-width query*/
+/*
+@media screen and (max-width:600px){
+    .col{
+        float:none;
+        width:100%;
+        margin:20px 0;
+        }
+    .col:nth-child(odd){
+        background:#8fb87f;
+    }
+    
+/*ranged query*/
+/*
+@media screen and (max-width:800px) and (min-width:601px{
+    .col{
+        float:left;
+        width:46%;
+        margin:1%;
+    }
+    .col:int-child(odd){
+        background:red;
+    }
+
+/*min-width query*/
+/*
+@media screen and (min-width:1100px){
+    .col{
+        width:23%;
+        margin:1%;
+    }
+}
+
+/*retina specific --- https://goo.gl/Pgu6y */
+
+@media
+/*safari, firefox, and opera 
+only screen and (-webkit-min-device-pixel-ratio: 1.25),
+only screen and ( min--moz-device-pixel-ratio: 1.25),
+only screen and ( -o-min-device-pixel-ratio: 1.25/1), *//*
+only screen and ( min-device-pixel-ratio: 1.25),
+only screen and ( min-resolution: 200dpi),
+only screen and ( min-resolution: 1.25dppx)
+{
+	.fancy{display:block; text-align:center}
+}*/
+
+
+
+
+
+
+
+
